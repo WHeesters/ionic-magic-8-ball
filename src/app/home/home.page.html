@@ -1,12 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-title>
+            Magic 8 Ball
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+
+    <ion-list>
+        <ion-item>
+            <ion-input type="text" [(ngModel)]="question" placeholder="Ask the mystic 8 ball anything..."></ion-input>
+        </ion-item>
+        <ion-button expand="block" color="secondary" (click)="showAnswer()">Click to Decide Fate</ion-button>
+        <h2>{{answer}}</h2>
+    </ion-list>
 </ion-content>
